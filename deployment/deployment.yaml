@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gs-springboot
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: gs-springboot
+  template:
+    metadata:
+      labels:
+        app: gs-springboot
+    spec:
+      containers:
+      - image: manuelkasiske/gs-springboot:latest
+        name: gs-springboot
+        ports:
+        - containerPort: 80
