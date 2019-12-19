@@ -14,7 +14,8 @@ spec:
         app: gs-springboot
     spec:
       containers:
-      - image: manuelkasiske/gs-springboot:latest
+      - image: 361893476061.dkr.ecr.eu-central-1.amazonaws.com/gs-spring-boot:latest
+        imagePullPolicy: Always
         name: gs-springboot
         ports:
         - containerPort: 80
